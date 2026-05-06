@@ -90,41 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Contact Form Handling ---
-    const contactForm = document.getElementById('contactForm');
-    const formMessage = document.querySelector('.form-message');
 
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            
-            // Loading state
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            submitBtn.disabled = true;
-
-            // Simulate API call / Form submission delay
-            setTimeout(() => {
-                formMessage.textContent = 'Message sent successfully! I will get back to you soon.';
-                formMessage.className = 'form-message success';
-                
-                // Reset form
-                contactForm.reset();
-                
-                // Reset button
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-                
-                // Clear message after 5 seconds
-                setTimeout(() => {
-                    formMessage.textContent = '';
-                    formMessage.className = 'form-message';
-                }, 5000);
-            }, 1500);
-        });
-    }
 });
 // animations.js - Intersection Observers, Counters, and Typing Effects
 

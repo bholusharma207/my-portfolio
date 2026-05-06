@@ -863,9 +863,10 @@ footer {
 
 /* --- Contact Section --- */
 .contact-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 3rem;
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .contact-info {
@@ -919,55 +920,7 @@ footer {
     color: var(--accent-secondary);
 }
 
-.contact-form-container {
-    padding: 3rem;
-}
 
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: var(--text-primary);
-    font-weight: 500;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 1rem;
-    background: rgba(10, 10, 15, 0.5);
-    border: 1px solid var(--border-glass);
-    border-radius: 8px;
-    color: var(--text-primary);
-    font-family: inherit;
-    font-size: 1rem;
-    transition: var(--transition-fast);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--accent-primary);
-    box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.2);
-}
-
-.form-message {
-    margin-top: 1rem;
-    text-align: center;
-    font-weight: 500;
-    min-height: 24px;
-}
-
-.form-message.success {
-    color: #10b981;
-}
-
-.form-message.error {
-    color: #ef4444;
-}
 /* responsive.css - Media Queries */
 
 /* Large screens (up to 1200px) */
